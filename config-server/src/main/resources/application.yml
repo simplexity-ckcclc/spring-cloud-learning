@@ -1,0 +1,17 @@
+server:
+  port: 9030
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/simplexity-ckcclc/configserver
+          username:
+          password:
+          search-paths: config
+
+
