@@ -1,4 +1,4 @@
-package com.ckcclc.springcloud;
+package com.ckcclc.springcloud.configserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.ckcclc.springcloud;
+package com.ckcclc.springcloud.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

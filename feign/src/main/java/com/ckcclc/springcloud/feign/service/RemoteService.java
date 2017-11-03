@@ -1,5 +1,6 @@
-package com.ckcclc.springcloud.service;
+package com.ckcclc.springcloud.feign.service;
 
+import com.ckcclc.springcloud.configserver.service.RemoteServiceFallback;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.ckcclc.springcloud.config;
+package com.ckcclc.springcloud.ribbon.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

@@ -1,8 +1,8 @@
-package com.ckcclc.springcloud.controller;
+package com.ckcclc.springcloud.feign.controller;
 
-import com.ckcclc.springcloud.service.RemoteService;
-
+import com.ckcclc.springcloud.feign.service.RemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +17,17 @@ public class Controller {
     @Autowired
     private RemoteService remoteService;
 
+    @Value("${foo}")
+    private String value;
+
     @RequestMapping(value = "/hello")
     public String hello(@RequestParam("name") String name) {
-        return "This is ribbon. " + remoteService.hello(name);
+        return "This is feign. " + remoteService.remoteHello(name);
+    }
+
+    @RequestMapping(value = "/config")
+    public String config(@RequestParam("key") String key) {
+//        return key + " : " + value;
+        return value;
     }
 }

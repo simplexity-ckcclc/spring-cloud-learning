@@ -1,4 +1,4 @@
-package com.ckcclc.springcloud.service;
+package com.ckcclc.springcloud.ribbon.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
