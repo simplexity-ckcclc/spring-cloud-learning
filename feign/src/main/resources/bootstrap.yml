@@ -1,7 +1,14 @@
 spring:
     cloud:
         config:
-          uri: http://localhost:9030/
+          discovery:
+            enabled: true
+            service-id: config-server
+#          uri: http://localhost:9030/
           label: master
           name: feign
           profile: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
