@@ -3,6 +3,7 @@ package com.ckcclc.springcloud.feign.controller;
 import com.ckcclc.springcloud.feign.service.RemoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RefreshScope
 public class Controller {
 
     @Autowired
@@ -26,8 +28,7 @@ public class Controller {
     }
 
     @RequestMapping(value = "/config")
-    public String config(@RequestParam("key") String key) {
-//        return key + " : " + value;
+    public String config() {
         return value;
     }
 }

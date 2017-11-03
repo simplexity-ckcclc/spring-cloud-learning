@@ -7,11 +7,9 @@ server:
 spring:
   application:
     name: feign
-  cloud:
-      config:
-        uri: http://localhost:9030/
-        label: master
-        profile: dev
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false
