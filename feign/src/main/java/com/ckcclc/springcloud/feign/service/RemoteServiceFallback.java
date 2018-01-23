@@ -1,6 +1,5 @@
 package com.ckcclc.springcloud.feign.service;
 
-import com.ckcclc.springcloud.feign.service.RemoteService;
 import org.springframework.stereotype.Component;
 
 /**

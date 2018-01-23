@@ -8,6 +8,11 @@ spring:
           label: master
           name: feign
           profile: dev
+        stream:
+          kafka:
+            binder:
+              brokers: 127.0.0.1:9092
+              zk-nodes: 127.0.0.1:2181
 eureka:
   client:
     serviceUrl:
